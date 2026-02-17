@@ -1,0 +1,10 @@
+@use "vars/vars";
+@use "layout/header";
+@use "components/hero-grid";
+@use "components/stack";
+@use "layout/footer";
+
+.page {
+  margin: 0;
+  font-family: vars.$font-family-base;
+}

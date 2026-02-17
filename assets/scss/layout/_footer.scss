@@ -1,0 +1,19 @@
+@use "../vars/vars";
+
+.site-footer {
+  height: vars.$footer-height;
+  padding-top: vars.$stack-overlap-offset * -1;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(vars.$footer-col-min-width, 1fr)
+  );
+  place-items: center;
+  gap: vars.$space-lg;
+  background-color: vars.$color-footer-bg;
+  color: vars.$color-text-on-dark;
+
+  &__column {
+    padding: vars.$space-sm;
+  }
+}

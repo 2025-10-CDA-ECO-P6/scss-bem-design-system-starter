@@ -1,0 +1,25 @@
+@use "../vars/vars";
+
+.site-header {
+  background-color: vars.$color-surface-dark;
+  margin: vars.$space-sm;
+  border-radius: vars.$radius-lg;
+
+  &__nav {
+    padding: vars.$space-sm;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: vars.$space-sm;
+  }
+
+  &__link {
+    color: vars.$color-text-on-dark;
+    text-decoration: none;
+  }
+}

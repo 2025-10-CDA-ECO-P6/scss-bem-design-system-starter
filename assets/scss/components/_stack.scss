@@ -1,0 +1,36 @@
+@use "../vars/vars";
+
+.stack {
+  position: relative;
+
+  &__section {
+    position: sticky;
+    top: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    border-radius: vars.$radius-lg;
+    margin-bottom: vars.$stack-overlap-offset;
+
+    &--first {
+      background: vars.$color-stack-first;
+    }
+
+    &--second {
+      background: vars.$color-stack-second;
+    }
+
+    &--third {
+      background: vars.$color-stack-third;
+    }
+  }
+  .card {
+    width: vars.$card-width;
+    height: vars.$card-height;
+    background-color: vars.$color-card-bg;
+    // clip-path: url(#cardShape);
+    clip-path: path(
+      "M 10,0 L 290,0 A 10,10 0,0,1 300,10 L 300,300 A 10,10 0,0,1 290,310 L 150,310 A 10,10 0,0,0 140,320 L 140,350 A 10,10 0,0,1 130,360 L 10,360 A 10,10 0,0,1 0,350 L 0,10 A 10,10 0,0,1 10,0 Z"
+    );
+  }
+}

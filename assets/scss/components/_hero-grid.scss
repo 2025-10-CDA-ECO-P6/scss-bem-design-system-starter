@@ -1,0 +1,38 @@
+@use "../vars/vars";
+
+.hero-grid {
+  display: grid;
+  max-width: vars.$hero-max-width;
+  width: 100%;
+  grid-template-areas:
+    "one"
+    "two"
+    "three";
+  gap: vars.$space-sm;
+  padding: vars.$hero-padding;
+
+  &__title {
+    margin: 0;
+    grid-area: one;
+    background-color: vars.$color-hero-title-bg;
+  }
+
+  &__content {
+    margin: 0;
+    grid-area: three;
+    background-color: vars.$color-hero-content-bg;
+  }
+
+  &__picture {
+    grid-area: two;
+    background-color: vars.$color-surface-light;
+    display: grid;
+    place-items: center;
+  }
+
+  @media (min-width: vars.$breakpoint-sm) {
+    grid-template-areas:
+      "one one two"
+      "three three two";
+  }
+}
